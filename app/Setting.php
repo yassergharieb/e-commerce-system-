@@ -8,14 +8,14 @@ class Setting extends Model
 {
     use \Spatie\Translatable\HasTranslations;
 
-    protected $translatable =  ['setting_name' , 'setting_value'];
-    protected $fillable =  ['setting_name' , 'setting_value' , 'created_at' , 'updated_at'];
+    protected $translatable =  ['translations'];
+    protected $fillable =  ['setting_name' , 'setting_value' , 'created_at' , 'updated_at' , 'translations'];
 
     protected $hidden =  ['created_at' , 'updated_at'];
 
     public $timestamps =  true;
 
-    protected $casts =  ['setting_value' => 'array'];
+    // protected $casts =  ['translations' => 'array'];
 
 
 
@@ -30,7 +30,23 @@ class Setting extends Model
 
     public static function set ($key , $value) {
 
+           if(is_array($value) && !key_exists('ar' , $value)) {
+            $value =  json_encode($value);
 
-        static::updateOrCreate(['setting_name' => $key ,  'setting_value' => $value]);
-    }
+            static::updateOrCreate(['setting_name' => $key ,  'setting_value' => $value]);
+
+           }
+           elseif( is_array($value) && key_exists('ar' , $value)) {
+            // $value =  json_encode($value);
+
+            static::updateOrCreate(['setting_name' => $key ,  'translations' => $value]);
+
+           }else {
+            static::updateOrCreate(['setting_name' => $key ,  'setting_value' => $value]);
+        }
+           }
+
+
+
+
 }

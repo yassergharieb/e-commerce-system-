@@ -63,6 +63,9 @@
                                                             <input type="text" id="pac-input"
                                                                    class="form-control"
                                                                    placeholder="  " name="setting_name">
+                                                                       value="{{$shiping_mehtod->getTranslation('translations' , $local)}}"
+
+
 
                                                             @error("setting_name")
                                                             <span class="text-danger"> {{$message}}</span>
@@ -76,8 +79,8 @@
                                                                 <label for="projectinput1">قيمة الخدمة </label>
                                                                 <input type="text" id="pac-input"
                                                                        class="form-control"
-
-                                                                       value="{{$shiping_mehtod->getTranslation('setting_value' , $local)}}"
+                                                                       value="{{$shiping_mehtod->setting_value}}"
+                                                                       {{-- value="{{$shiping_mehtod->getTranslation('translations' , $local)}}" --}}
                                                                        placeholder="  " name="setting_value">
 
                                                                 @error("setting_value")

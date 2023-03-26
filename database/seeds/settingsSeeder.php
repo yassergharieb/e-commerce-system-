@@ -30,7 +30,11 @@ class settingsSeeder extends Seeder
            'free_shiping_cost' => 0,
            'local_shiping_cost' => 0,
            'outer_shiping_cost' => 0,
-             'store_name' => ['en' => 'yasser store' , 'ar' => 'المتجر'],
+            //   column =>   setting_name => ar: en:
+            //   column =>   setting_value => ar: en: || number
+
+
+             'store_name' =>       ['en' => 'yasser store' , 'ar' => 'المتجر'],
              'free_shiping_lable' => ['en' => 'free shiping' , 'ar' => 'التوصيل المجاني'],
              'local_shiping_lable' => ['en' => 'locla shiping' , 'ar' => 'التوصيل الداخلي'],
              'outer_shiping_lable' => ['en' => "outer shiping" , 'ar' => 'التوصيل الخارجي '],

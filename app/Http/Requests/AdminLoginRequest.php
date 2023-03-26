@@ -32,7 +32,7 @@ class AdminLoginRequest extends FormRequest
     public function messages()
     {
         return [
-            'email.required' => 'هذا الحقل مطلوب',
+            'email.required' => '',
             'password.required' => 'من فضلك ادخل كلمة المرور',
         ];
     }
