@@ -590,7 +590,7 @@
 
                             <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/productlist.tpl -->
 
-                            <div class="nov-productlist  productlist-rows     col-xl-8 col-lg-8 col-md-8 col-xs-12 col-md-12">
+                            {{-- <div class="nov-productlist  productlist-rows     col-xl-8 col-lg-8 col-md-8 col-xs-12 col-md-12">
                                 <div class="block block-product clearfix">
                                     <h2 class="title_block">
                                         NEW ARRIVALS
@@ -2295,7 +2295,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
+                            @include('front.Products')
 
                             <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/productlist.tpl -->
                         </div></div><div class="nov-row spacing-30 col-lg-12 col-xs-12" ><div class="nov-row-wrap row">
@@ -5277,7 +5278,9 @@
                             </div>
 
                             <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/productlist.tpl -->
-                        </div></div><div class="nov-row policy-home col-lg-12 col-xs-12" ><div class="nov-row-wrap row">
+                        </div></div>
+                        <div class="nov-row policy-home col-lg-12 col-xs-12" >
+                            <div class="nov-row-wrap row">
                             <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/html.tpl -->
                             <div class="nov-html col-xl-4 col-lg-4 col-md-4">
                                 <div class="block">
@@ -5325,7 +5328,10 @@
                             </div>
 
                             <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/html.tpl -->
-                        </div></div><div class="nov-row  col-lg-12 col-xs-12" ><div class="nov-row-wrap row">
+                        </div>
+                     </div>
+                        <div class="nov-row  col-lg-12 col-xs-12" >
+                            <div class="nov-row-wrap row">
                             <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/productlist.tpl -->
 
                             <div class="nov-productlist   productlist-liststyle    col-xl-4 col-lg-4 col-md-4 col-xs-12 col-md-12">
@@ -6971,7 +6977,8 @@
                             </div>
 
                             <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/productlist.tpl -->
-                        </div></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

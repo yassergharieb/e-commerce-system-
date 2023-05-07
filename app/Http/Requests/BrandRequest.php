@@ -25,18 +25,18 @@ class BrandRequest extends FormRequest
     {
         return [
         "brand_name" => 'required|string',
-        "photo" => 'required|mimes:png,jpg',
+        "photo" => 'required_without:id|mimes:png,jpg',
         ];
     }
 
 
 
-//     public function messages()
-//     {
-//         return [
-//             "brand_name.required"  => __('messages.category_name_required'),
-//             "slug.requird" => __('messages.slug_required')
-//          ];
-//     }
-// }
+    public function messages()
+    {
+        return [
+            "brand_name.required"  => "brand name is required",
+            "photo.requird_without:id" => "photo is required"
+         ];
+    }
 }
+

@@ -17,7 +17,7 @@
         rel="stylesheet">
     <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css"
           rel="stylesheet">
-
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/'.getFolder().'/plugins/animate/animate.css')}}">
     <!-- BEGIN VENDOR CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/'.getFolder().'/vendors.css')}}">
@@ -48,6 +48,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/vendors/css/cryptocoins/cryptocoins.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/vendors/css/extensions/datedropper.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/vendors/css/extensions/timedropper.min.css')}}">
+    {{-- <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/vendors/css/file-uploaders/dropzone.min.css')}}"> --}}
+
     <!-- END Page Level CSS-->
     <!-- BEGIN Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/css-rtl/style-rtl.css')}}">
@@ -76,6 +78,8 @@
 @notify_render --}}
 
 <!-- BEGIN VENDOR JS-->
+<script src="{{asset('assets/admin/vendors/js/extensions/dropzone.min.js')}}" type="text/javascript"></script>
+
 <script src="{{asset('assets/admin/vendors/js/vendors.min.js')}}" type="text/javascript"></script>
 <!-- BEGIN VENDOR JS-->
 <script src="{{asset('assets/admin/vendors/js/tables/datatable/datatables.min.js')}}"

@@ -36,6 +36,25 @@ return [
     "displayAll" => "display all",
 
     "createNewSUbCat" => "create new SubCategory",
-    "category_add_success" => "category add successfully"
+    "category_add_success" => "category add successfully",
+    "sku_required" => 'product code is required',
+    "productcode" => 'product code',
+    'track_warehouse' => 'Track Warehouse',
+    'enable_warehouse_tracking' => 'Enable Warehouse Tracking',
+    'disable_warehouse_tracking' => 'Disable Warehouse Tracking',
+    'product_info_in_warehouse' => 'Product Information in Warehouse',
+    'product_status' => 'Product Status',
+    'available' => 'Available',
+    'unavailable' => 'Unavailable',
+    'qty'=> "quantity",
+    "choose_the_product_tracking_status" => "choose the product tracking status", 
+
+    'quantity_required_if_tracking_enabled' => 'Quantity is required if product tracking is enabled in the warehouse.',
+
+
+
+
+
+
 
 ];

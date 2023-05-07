@@ -25,6 +25,13 @@
     <link rel="icon" type="image/vnd.microsoft.icon" href="/savemart/img/favicon.ico?1531456858">
     <link rel="shortcut icon" type="image/x-icon" href="/savemart/img/favicon.ico?1531456858">
 
+{{--
+    <link href="{{asset('assets/front/css/css.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/front/css/css-1.css')}}" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="{{asset('assets/front/themes/vinova_savemart/assets/cache/theme-4527f124.css')}}" type="text/css" media="all"> --}}
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700,900" rel="stylesheet">

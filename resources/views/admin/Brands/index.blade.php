@@ -65,7 +65,7 @@
 
                                                         {{-- <td>{{$category ->getActive()}}</td> --}}
 
-                                                        <td> <img style="width: 150px; height: 100px;" src=""></td>
+                                                        <td> <img style="width: 150px; height: 100px;" src="{{$brand->photo}}"></td>
 
 
                                                         <td>

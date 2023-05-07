@@ -76,6 +76,69 @@ Route::group(
 
         });
 
+
+
+        Route::group(['prefix' => 'tags'], function() {
+            Route::get('/', 'TagsController@index')->name('tags.index');
+            Route::get('/create', 'TagsController@create')->name('tags.create');
+            Route::post('store', 'TagsController@store')->name('tags.store');
+            Route::get('tag/{id}', 'TagsController@show')->name('tags.show');
+            Route::get('edit/{id}', 'TagsController@edit')->name('tags.edit');
+            Route::post('tag/{id}', 'TagsController@update')->name('tags.update');
+            Route::post('delete/{id}', 'TagsController@destroy')->name('tags.destroy');
+         });
+
+
+         Route::group(['prefix' => 'products'], function() {
+            Route::get('/', 'ProductsController@index')->name('product.index');
+            Route::get('create', 'ProductsController@create')->name('product.create');
+            Route::get('create/price/{id}', 'ProductsController@createPrice')->name('product.price.create');
+            Route::get('create/stockDetails/{id}', 'ProductsController@createStockDetails')->name('product.stock.create');
+            Route::get('upload/product/images/{id}', 'ProductsController@createMultiIMageForProduct')->name('product.images.upload');
+
+
+            Route::post('store', 'ProductsController@store')->name('product.store');
+            Route::post('store/product/images', 'ProductsController@saveImages')->name('product.images.store');
+
+            Route::post('store/price/{id}', 'ProductsController@storePriceDetails')->name('product.price.store');
+            Route::post('store/details/{id}', 'ProductsController@storeStockDetails')->name('product.stock.store');
+
+            Route::get('show/{id}', 'ProductsController@show')->name('product.show');
+            Route::get('edit/{id}', 'ProductsController@edit')->name('product.edit');
+            Route::post('update/{id}', 'ProductsController@update')->name('product.update');
+            Route::post('delete/{id}', 'ProductsController@destroy')->name('product.destroy');
+         });
+
+
+         Route::group(['prefix' => 'attributes'], function() {
+            Route::get('/', 'AttributesController@index')->name('Attribbutes.index');
+            Route::get('/create', 'AttributesController@create')->name('Attribbutes.create');
+            Route::post('store', 'AttributesController@store')->name('Attribbutes.store');
+            Route::get('Attribute/{id}', 'AttributesController@show')->name('Attribbutes.show');
+            Route::get('edit/{id}', 'AttributesController@edit')->name('Attribbutes.edit');
+            Route::post('Attribute/{id}', 'AttributesController@update')->name('Attribbutes.update');
+            Route::post('delete/{id}', 'AttributesController@destroy')->name('Attribbutes.destroy');
+         });
+         Route::group(['prefix' => 'options'], function () {
+            Route::get('/', 'OptionController@index')->name('options.index');
+            Route::get('/create', 'OptionController@create')->name('options.create');
+            Route::post('/store', 'OptionController@store')->name('options.store');
+            Route::get('show/{id}', 'OptionController@show')->name('options.show');
+            Route::get('/edit/{id}', 'OptionController@edit')->name('options.edit');
+            Route::post('update/{id}', 'OptionController@update')->name('options.update');
+            Route::post('delete/{id}', 'OptionController@destroy')->name('options.destroy');
+        });
+        Route::group(['prefix' => 'slider'] , function () {
+
+
+            Route::get('/', 'SliderController@addImages')->name('admin.slider.create');
+
+            Route::post('addSliderImages', 'SliderController@storeImag')->name('slider.add');
+            Route::post('saveImages' , 'SliderController@SaveImagesToDB' )->name('slider.add.db');
+
+
+        });
+
     });
 
 });

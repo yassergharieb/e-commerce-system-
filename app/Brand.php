@@ -17,4 +17,14 @@ class Brand extends Model
 
     protected $Casts =  ['is_active' => 'boolean'];
 
+
+    public function getPhotoAttribute($val) {
+        return ($val != null) ? asset ('assets/images/brands/' .$val) : "";
+    }
+
+
+    protected function scopeActive($query){
+        return $query->where('is_active', 1);
+    }
+
 }

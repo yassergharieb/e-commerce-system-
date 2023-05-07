@@ -6,6 +6,8 @@ use App\Brand;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\BrandRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class BrandsController extends Controller
 {
@@ -41,7 +43,6 @@ class BrandsController extends Controller
     public function store(BrandRequest $request)
     {
      try {
-
         if (!$request->has('is_active')) {
             $request->request->add(['is_active' => 0]);
         } else {
@@ -86,7 +87,9 @@ class BrandsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $brand  =  Brand::find($id);
+
+        return view('admin.Brands.edit' , compact('brand'));
     }
 
     /**
@@ -96,9 +99,33 @@ class BrandsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(BrandRequest $request, $id)
     {
-        //
+        $brand =  Brand::find($id);
+
+        if ($request->has('photo')) {
+            // $old_photo_path  =  'public/assets/images/Brands/'. $brand->photo;
+
+
+            File::delete(public_path($brand->photo));
+            $file =  uploadPhoto('Brands' , $request->photo);
+            $brand->where('id' , $id)->update([
+                   'photo'  =>  $file
+            ]);
+
+        }
+
+        if (!$request->has('is_active')) {
+            $request->request->add(['is_active' => 0]);
+        } else {
+            $request->request->add(['is_active' => 1]);
+        }
+
+        $brand->setTranslation('brand_name' , app()->getlocale() , $request->brand_name);
+        $brand->update($request->except('id' , '_token' , 'photo'));
+        return redirect()->route('Brands.index')->with(['success' => 'تم اضافة الماركة التجارية بنجاح']);
+
+
     }
 
     /**

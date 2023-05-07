@@ -84,6 +84,72 @@
             </ul>
         </li>
 
+
+        <li class="nav-item"><a href=""><i class="la la-male"></i>
+            <span class="menu-title" data-i18n="nav.dash.main"> tags  </span>
+            <span
+                class="badge badge badge-success badge-pill float-right mr-2">#######</span>
+        </a>
+        <ul class="menu-content">
+            <li class="active"><a class="menu-item" href="{{route('tags.index')}}"
+                                  data-i18n="nav.dash.ecommerce"> عرض الكل </a>
+            </li>
+            <li><a class="menu-item" href="{{route('tags.create')}}" data-i18n="nav.dash.crypto">أضافة
+                    tag  </a>
+            </li>
+        </ul>
+
+
+
+        <li class="nav-item"><a href=""><i class="la la-male"></i>
+            <span class="menu-title" data-i18n="nav.dash.main"> products  </span>
+            <span
+                class="badge badge badge-success badge-pill float-right mr-2">#######</span>
+        </a>
+        <ul class="menu-content">
+            <li class="active"><a class="menu-item" href="{{route('product.index')}}"
+                                  data-i18n="nav.dash.ecommerce"> عرض الكل </a>
+            </li>
+            <li><a class="menu-item" href="{{route('product.create')}}" data-i18n="nav.dash.crypto">أضافة
+                    tag  </a>
+            </li>
+        </ul>
+
+
+
+        <li class="nav-item"><a href=""><i class="la la-male"></i>
+            <span class="menu-title" data-i18n="nav.dash.main"> attributes  </span>
+            <span
+                class="badge badge badge-success badge-pill float-right mr-2">#######</span>
+        </a>
+        <ul class="menu-content">
+            <li class="active"><a class="menu-item" href="{{route('Attribbutes.index')}}"
+                                  data-i18n="nav.dash.ecommerce"> عرض الكل </a>
+            </li>
+            <li><a class="menu-item" href="{{route('Attribbutes.create')}}" data-i18n="nav.dash.crypto">أضافة
+                    tag  </a>
+            </li>
+
+
+            <li class="nav-item"><a href=""><i class="la la-male"></i>
+                <span class="menu-title" data-i18n="nav.dash.main"> الخيارات  </span>
+                <span
+                    class="badge badge badge-success badge-pill float-right mr-2">#######</span>
+            </a>
+            <ul class="menu-content">
+                <li class="active"><a class="menu-item" href="{{route('options.index')}}"
+                                      data-i18n="nav.dash.ecommerce"> عرض الكل </a>
+                </li>
+                <li><a class="menu-item" href="{{route('options.create')}}" data-i18n="nav.dash.crypto">أضافة
+                        tag  </a>
+                </li>
+
+
+        </ul>
+
+
+    </li>
+
 {{--
             <li class="nav-item"><a href=""><i class="la la-male"></i>
                     <span class="menu-title" data-i18n="nav.dash.main">الطلاب  </span>
@@ -128,6 +194,18 @@
                             <li><a class="menu-item" href="{{route('shipingMethod.edit' , 'outer')}}"
                                    data-i18n="nav.templates.vert.compact_menu">توصيل خارجي</a>
                             </li>
+
+
+                </ul>
+
+
+                <ul class="menu-content">
+                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">slider</a>
+                        <ul class="menu-content">
+                            <li><a class="menu-item" href="{{route('admin.slider.create')}}"
+                                   data-i18n="nav.templates.vert.classic_menu">add images to slider</a>
+                            </li>
+                   
 
 
                 </ul>

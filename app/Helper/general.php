@@ -7,8 +7,22 @@
 
 
 function uploadPhoto($folder , $image) {
-$image->store('/', $folder);
-$fileNmae =  $image->hashName();
+try {
+      $image->store('/', $folder);    
+      $fileNmae =  $image->hashName();
+      return $fileNmae;
+  } catch (\Exception $ex) {
+    return $ex->getMessage();
+  }   
 
-return $fileNmae;
+}
+
+
+
+function SavePhoto($photo , $folder) {
+    $file_extension =  $photo->getClientOriginalExtension();
+    $file_name =  time().'.' . $file_extension;
+    $path =  public_path($folder);
+    $photo-> move($path ,  $file_name);
+    return $file_name;
 }

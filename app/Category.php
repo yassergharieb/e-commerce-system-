@@ -36,4 +36,25 @@ public function getActive () {
    public function _parent  () {
         return $this->belongsTo(self::class , 'parent_id');
      }
+
+
+
+     protected function scopeActive($query){
+        return $query->where('is_active', 1);
+        
+    }
+
+
+
+
+
+    public function Childern () {
+         return $this->hasMany(self::class , 'parent_id');
+    }
+
+    public function Products() {
+        return $this->hasMany(Product::class , 'product_categories');
+    }
+
+
 }
