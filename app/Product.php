@@ -49,7 +49,7 @@ class Product extends Model
 
     public function categories()
     {
-        return $this->belongsToMany(Category::class, 'products_categories');
+        return $this->belongsToMany(Category::class, 'product_categories');
     }
 
     public function tags()
@@ -91,8 +91,9 @@ class Product extends Model
 
     }
 
-
-
+    public function wishList(){
+        return $this->belongsToMany(User::class , 'wish_list');
+    } 
 
 
 }

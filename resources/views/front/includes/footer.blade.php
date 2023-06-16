@@ -51,14 +51,14 @@
                                                                 <input class="inputNew form-control grey newsletter-input" placeholder="Enter your email address" type="text" name="email" size="18" value="" />
                                                                 <span class="input-group-btn">
                                     <button type="submit" name="submitNewsletter" class="btn btn-primary">إشترك</button>
-                                </span>
+                                 </span>
                                                                 <input type="hidden" name="action" value="0" />
                                                             </div>
                                                             <div class="checkbox">
-                                <span class="custom-checkbox">
+                                 <span class="custom-checkbox">
                                     <input name="no-view" class="no-view" type="checkbox">
                                     <span class="ps-shown-by-js"><i class="material-icons checkbox-checked">check</i></span>
-                                </span>
+                                 </span>
                                                                 <span>Don&#039;t show this popup again</span>
                                                             </div>
                                                         </div>

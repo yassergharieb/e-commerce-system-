@@ -15,15 +15,30 @@
                         <p>Today Deals </p>
                     </div>
                 </div>
+                
                 <div class="col-lg-6 col-md-6 d-flex justify-content-end align-items-center header-top-right">
-                    <div class="register-out">
-                        <i class="zmdi zmdi-account"></i>
-                        <a class="register" href="http://demo.bestprestashoptheme.com/savemart/ar/تسجيل الدخول?create_account=1" data-link-action="display-register-form">
-                            Register
-                        </a>
-                        <span class="or-text">or</span>
-                        <a class="login" href="http://demo.bestprestashoptheme.com/savemart/ar/الحساب الشخصي" rel="nofollow" title="تسجيل الدخول إلى حسابك">Sign in</a>
-                    </div>
+                   @guest
+                   <div class="register-out">
+                    <i class="zmdi zmdi-account"></i>
+                    <a class="register" href="{{route('register')}}" data-link-action="display-register-form">
+                        Register
+                    </a>
+                    <span class="or-text">or</span>
+                    <a class="login" href="{{route('login')}}" rel="nofollow" title="تسجيل الدخول إلى حسابك">Sign in</a>
+                </div>
+                   @endguest
+
+
+                   @auth
+                   <div class="register-out">
+                    <i class="zmdi zmdi-account"></i>
+                    <form action='{{route('logout')}}' method="POST"> 
+                       @csrf
+                       @method('POST')
+                    <button type="submit" class="logout"  title="تسجيل الخروج إلى حسابك">log out</button>
+                    </form>
+                </div>
+                   @endauth
 
                     <!-- begin module:ps_currencyselector/ps_currencyselector.tpl -->
                     <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/ps_currencyselector/ps_currencyselector.tpl --><div id="_desktop_currency_selector" class="currency-selector groups-selector hidden-sm-down currentcy-selector-dropdown">

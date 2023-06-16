@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(
     [
-        'namespace' => 'Site',
+       
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
     ],
@@ -31,33 +31,47 @@ Route::group(
                         return ' you are authanticated';
                     })->name('profile');
 
-                    // Route::get('verify' , function() {
-                    //    return view('email.something');
-                    // });
-                    //    Route::post('register' , 'Auth\loginController@register');
-            
-                }
-        );
+                       
+                 
+                    // Route::get('wishlist/{product_id}' , 'Site\WishListController@storeToUserWishList' )->name('wishList.add');  
+
+                    Route::post('wishlist' , 'Site\WishListController@storeToUserWishList' )->name('wishList.add'); 
+                    Route::get('productd/wishList' , 'Site\WishListController@geProudctsInWishList' )->name('wishList.get');  
+
+
+        });
+      
 
 
         Route::get('verify', function () {
             return view('email.something');
         });
 
+
+        Route::group(['namespace' => 'Site'] ,  function () {
+
+
+            
         Route::get('/home', 'HomeController@index')->name('home');
+        Route::get('category/{slug}' , 'CategoryController@getProductsByCategorySlug')->name('category.products.slug');
 
+        Route::get('product/{id}' , 'CategoryController@showProductInfo')->name('product.info');
 
-        Route::post(
-            '/',
-            'EmailVerificationController@verify'
-        )->name('email.confirmation');
+        Route::post('/postemalicode','EmailVerificationController@verify')->name('email.confirmation');
+        Route::get('confirmationForm','EmailVerificationController@confirmationForm')->name('email.confirmation.blade');
 
-        Route::group(
-            ['prefix' => 'user', 'middleware' => 'guest'],
-            function () {
+    
+
+        });
+
+        Route::group( [ 'middleware' => 'guest'],function (){
+
 
                 }
         );
 
     }
+
 );
+
+// Route::get('register' , 'Auth\RegisterController@register');

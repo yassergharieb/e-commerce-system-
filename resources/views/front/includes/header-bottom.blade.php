@@ -16,7 +16,7 @@
                                     @isset($data['categories'])
                                         @foreach ($data['categories'] as $category )
                                         <li class="item  parent" >
-                                            <a href="" title="Laptops &amp; Accessories">
+                                            <a href="{{route('category.products.slug' , $category->slug)}}" title="Laptops &amp; Accessories">
                                                 <i class="hasicon nov-icon" style="background:url('http://demo.bestprestashoptheme.com/savemart/themes/vinova_savemart/assets/img/modules/novverticalmenu/icon/laptop.png') no-repeat scroll center center;">
                                                 </i> 
                                                 {{$category->category_name}}

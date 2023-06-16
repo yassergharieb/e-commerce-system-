@@ -15,10 +15,12 @@
     <title>Prestashop_Savemart</title>
     <meta name="description" content="المتجر مدعوم من طرف بريستاشوب">
     <meta name="keywords" content="">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
 
 
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=yes">
+    
 
 
 
@@ -227,10 +229,11 @@
 </div>
 
 
+<script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
 
 <script type="text/javascript" src="http://demo.bestprestashoptheme.com/savemart/themes/vinova_savemart/assets/cache/bottom-3c96ed23.js" ></script>
 
-
+@yield('scripts')
 
 
 

@@ -52,7 +52,11 @@ return [
     'quantity_required_if_tracking_enabled' => 'Quantity is required if product tracking is enabled in the warehouse.',
 
 
-
+    'price' => 'السعر',
+    'special_price' => 'سعر خاص',
+    'special_price_type' => 'نوع السعر الخاص',
+    'special_price_start_date' => 'تاريخ بدء السعر الخاص',
+    'special_price_end_date' => 'تاريخ انتهاء السعر الخاص',
 
 
 

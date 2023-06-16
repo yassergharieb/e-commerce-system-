@@ -52,8 +52,8 @@ public function getActive () {
          return $this->hasMany(self::class , 'parent_id');
     }
 
-    public function Products() {
-        return $this->hasMany(Product::class , 'product_categories');
+    public function products() {
+        return $this->belongsToMany(Product::class , 'product_categories');
     }
 
 
