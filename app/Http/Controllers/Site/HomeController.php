@@ -32,10 +32,12 @@ class HomeController extends Controller
       }
     
     ])->get();
+     
+  
+  
 
-
+   
     
-    
-      return view('front.home' , compact('data'));
+      return view('front.home' , compact('data') );
     }
 }

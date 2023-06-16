@@ -8,11 +8,12 @@ class Option extends Model
 {
     use HasTranslations;
 
-    public $translatable = ['name'];
-    protected $fillable = ['attribute_id', 'product_id', 'name', 'price'];
+    public $translatable = ['option_name'];
+    protected $fillable = ['attribute_id', 'product_id', 'option_name', 'price' , 'created_at' , 'updated_at'];
 
     protected $table = 'products_attributes';
-    public $timestamps = false;
+    
+    public $timestamps = true;
 
 
 

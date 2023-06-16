@@ -3,7 +3,7 @@
 <div class="nov-productlist  productlist-rows     col-xl-8 col-lg-8 col-md-8 col-xs-12 col-md-12">
     <div class="block block-product clearfix">
         <h2 class="title_block">
-           {{$category->category_name}}
+         something 
         </h2>
         <div class="block_content">
             <div id="productlist1693764381" class="product_list grid owl-carousel owl-theme multi-row" data-autoplay="false" data-autoplayTimeout="6000" data-loop="false" data-margin="30" data-dots="false" data-nav="true" data-items="2" data-items_large="2" data-items_tablet="3" data-items_mobile="1" >
@@ -66,7 +66,7 @@
     
                                         <div class="product-title" itemprop="name">
                                             <a href= "{{route('product.info' , $product->id)}}">
-                                           {{$product->name}}
+                                         
                                          </a>
                                        </div>
     
@@ -86,7 +86,7 @@
     
                                         </div>
                                     </div>
-                                    <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                    {{-- <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                                         <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
                                             <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
                                             <input type="hidden" name="id_product" value="1">
@@ -108,7 +108,7 @@
                                             <i class="fa fa-search"></i>
                                             <span> نظرة سريعة</span>
                                         </a>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>

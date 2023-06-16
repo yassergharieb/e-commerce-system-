@@ -14,7 +14,12 @@ class CategoryDatabaseSeed extends Seeder
      */
     public function run()
     {
-       factory(Category::class , 20)->create();
+      $categories = factory(Category::class , 20)->create();
+       $categories->each(function ($category) use ($categories) {
+        $parent = $categories->random();
+        $category->parent_id = $parent->id;
+        $category->save();
+    });
     // Category::factory()->count(20)->create();
     }
 }

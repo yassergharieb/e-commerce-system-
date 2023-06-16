@@ -21,21 +21,25 @@ return [
     "category_name_required" => 'اسم القسم مطلوب',
     "slug_required" => 'الرابط مطلوب ',
     "sku_required" => 'الكود مطلوب ',
-    "productcode" => 'كود المنتج', 
-    
+    "productcode" => 'كود المنتج',
+
 
     "generalErrorMessage" => ' حدث خطأ ما، حاول مرة أخري',
     "createNewCategory" => "اضافة قسم جديد",
     "subcategory" => "الاقسام الفرعية",
     "subcategories" => "الاقسام الفرعية",
-
+    'price' => 'Price',
+    'special_price' => 'Special Price',
+    'special_price_type' => 'Special Price Type',
+    'special_price_start_date' => 'Special Price Start Date',
+    'special_price_end_date' => 'Special Price End Date',
 
     "lang" => "اللغة",
     "status" => "الحالة",
     "operations" => "الاجراءات",
     "displayAll" => "عرض الكل",
     "createNewSUbCat" => "اضافة  قسم جديد",
-    "category_add_success" => "تم اضافة قسم جديد بنجاح", 
+    "category_add_success" => "تم اضافة قسم جديد بنجاح",
     'track_warehouse' => 'تتبع المستودع',
     'enable_warehouse_tracking' => 'اتاحة تتبع المستودع',
     'disable_warehouse_tracking' => 'عدم اتاحة تتبع المستودع',
@@ -44,10 +48,10 @@ return [
     'product_status' => 'حالة المنتج',
     'available' => 'متاح',
 
-    'unavailable' => 'غير متاح', 
-    'qty'=> 'الكمية',
+    'unavailable' => 'غير متاح',
+    'qty' => 'الكمية',
 
-    "choose_the_product_tracking_status" => "اختر حالة المنت في المستودع", 
+    "choose_the_product_tracking_status" => "اختر حالة المنت في المستودع",
     'quantity_required_if_tracking_enabled' => 'الكمية مطلوبة اذا تمت اتاحة التتبع للمنتج في المستودع.',
 
 

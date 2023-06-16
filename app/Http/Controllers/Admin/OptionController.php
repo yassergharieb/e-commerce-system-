@@ -52,8 +52,8 @@ class OptionController extends Controller
      */
     public function store(Request $request)
     {
-
-
+      
+     Option::create($request->except('_token'));
      }
 
 

@@ -43,4 +43,16 @@ class User extends Authenticatable
     public function codes () {
         return $this->hasMany(User_vertification::class, 'user_id');
     }
+
+
+
+    public function  wishList() {
+        return $this->belongsToMany(Product::class , 'wish_list');
+    }
+
+
+   public function wishListHas($productId) {
+    return  self::wishList()->where('product_id' , $productId)->exists();
+   }
+
 }

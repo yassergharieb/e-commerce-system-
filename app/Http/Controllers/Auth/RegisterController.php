@@ -74,7 +74,7 @@ class RegisterController extends Controller
     {
 
         try {
-         DB::beginTransaction();
+         \Illuminate\Support\Facades\DB::beginTransaction();
         $verificationUser =  [];
 
       
@@ -84,16 +84,24 @@ class RegisterController extends Controller
             'Email'  => $data['Email'],
             'password' => Hash::make($data['password']),
         ]);
-           
+       
 
          $verificationUser['user_id'] =  $user->id;
          $this->userVerficationCode->SendVerificationCode($verificationUser);
-         $this->userVerficationCode->sendEmailWithVerificatinCode($user , $user->codes
-        );
-          DB::commit();
-             return $user;
+         $this->userVerficationCode->sendEmailWithVerificatinCode($user , $user->code);
+      
+            \Illuminate\Support\Facades\DB::commit();
+
+    
+            // return $user;
+            if ($user) {
+                return redirect()->route('email.confirmation.blade');
+            }
+        
+         
+
         } catch (\Exception $ex) {
-          DB::rollBack();
+          \Illuminate\Support\Facades\DB::rollBack();
           return redirect()->back()->with(['error' => 'something went wrong']);
         }
 
